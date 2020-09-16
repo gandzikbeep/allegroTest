@@ -19,7 +19,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get(baseUrl);
+        driver.get(baseUrl); //t
     }
 
     @After
