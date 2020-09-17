@@ -1,31 +1,34 @@
 package BaseConfig;
 
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    public static WebDriver driver;
+public WebDriver driver;
 
-    @Before
-    public void setup() {
-        System.setProperty("webdriver.chrome.driver", "C:\\PLIKI\\allegroTest\\src\\test\\java\\chromedriver.exe");
-        String baseUrl = "https://allegro.pl/";
+  @Before
+    public void setup(){
 
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get(baseUrl); //t6y6yh6y6
+      WebDriverManager.chromedriver().setup();
+      driver = new ChromeDriver();
+      driver.manage().window().maximize();
+
+      driver.get("https://allegro.pl/");
+      driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+  }
+
+  @After
+    public void tearDown(){
+      driver.quit();
     }
 
-    @After
-    public void endTest() {
-        if (null != driver) {
-            driver.quit();
-        }
-        driver = null;
-    }
+
 }

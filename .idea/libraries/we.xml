@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="we">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../selenium-java-3.141.59 (2)/client-combined-3.141.59.jar!/" />
+      <root url="file://$PROJECT_DIR$/../selenium-java-3.141.59 (2)" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../selenium-java-3.141.59 (2)/client-combined-3.141.59-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../selenium-java-3.141.59 (2)" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../selenium-java-3.141.59 (2)" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../selenium-java-3.141.59 (2)" recursive="false" type="SOURCES" />
+  </library>
+</component>
